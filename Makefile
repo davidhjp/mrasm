@@ -2,7 +2,7 @@ CFLAGS= -c -g -fPIC
 CFLAGS2= -I/cygdrive/c/Program\ Files\ \(x86\)/Java/jdk1.6.0_21/include -I/cygdrive/c/Program\ Files\ \(x86\)/Java/jdk1.6.0_21/include/win32
 all : clean iniparser.o machine.o table.o macstack.o y.tab.o lex.yy.o mrasm.o socket_io.o main.o
 	gcc *.o -lfl -lstdc++ -o mrasm.exe
-	mkdir -p mrasm && mv mrasm.exe mrasm && cp newr.ini mrasm
+	mkdir -p mrasm && mv mrasm.exe mrasm/mrasm && cp newr.ini mrasm
 y.tab.c y.tab.h : yaccer.y
 	yacc -d yaccer.y
 
